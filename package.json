@@ -1,0 +1,9 @@
+{
+  "name": "repo-root",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "dependencies": {
+    "@types/node": "^20.14.11",
+    "prettier": "catalog:"
+  }
+}

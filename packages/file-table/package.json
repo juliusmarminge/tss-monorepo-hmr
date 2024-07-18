@@ -1,0 +1,33 @@
+{
+  "name": "@repo/file-table",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./*": [
+      "./src/*.tsx",
+      "./src/*.ts"
+    ]
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "tailwind-merge": "^2.4.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-table": "^8.19.3",
+    "@types/react": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "react": ">=18.2",
+    "@tanstack/react-table": ">=8.19"
+  }
+}

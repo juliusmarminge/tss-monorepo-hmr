@@ -1,0 +1,35 @@
+{
+  "name": "dash",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "format": "prettier --write '**/*' --ignore-unknown"
+  },
+  "dependencies": {
+    "@repo/file-table": "workspace:*",
+    "@tanstack/react-router": "^1.45.4",
+    "@tanstack/react-table": "^8.19.3",
+    "@tanstack/router-devtools": "^1.45.4",
+    "@tanstack/router-plugin": "^1.45.3",
+    "@tanstack/start": "^1.45.4",
+    "isbot": "^5.1.12",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwind-merge": "^2.4.0",
+    "vinxi": "^0.3.12",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "^4.3.1",
+    "prettier": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "^5.3.3"
+  }
+}
