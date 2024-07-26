@@ -79,7 +79,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               }}
               className={
                 !!matchRoute({
-                  to: "/$appId",
+                  to: "/apps/$appId/",
                   params: { appId: app },
                   fuzzy: true,
                 })
