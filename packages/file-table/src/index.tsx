@@ -44,13 +44,15 @@ const createColumns = () => [
   columnHelper.display({
     id: "actions",
     header: () => <span>...</span>,
-    cell: function Cell({ row, table }) {
-      const [open, setOpen] = React.useState(false);
-
-      return <>...</>;
-    },
+    cell: Cell,
   }),
 ];
+
+function Cell({ row, table }) {
+  const [open, setOpen] = React.useState(false);
+
+  return <>...</>;
+}
 
 export function FileTable(props: {
   initialPaginationState: PaginationState;
