@@ -45,7 +45,7 @@ const createColumns = () => [
     id: "actions",
     header: () => <span>...</span>,
     cell: function Cell({ row, table }) {
-      const [open, setOpen] = React.useState(false);
+      // const [open, setOpen] = React.useState(false);
 
       return <>...</>;
     },

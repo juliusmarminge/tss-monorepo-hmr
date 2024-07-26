@@ -1,4 +1,8 @@
-import { createRootRoute } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  useMatchRoute,
+  useNavigate,
+} from "@tanstack/react-router";
 import { Link, Outlet, ScrollRestoration } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { Body, Head, Html, Meta, Scripts } from "@tanstack/start";
@@ -38,6 +42,8 @@ function RootComponent() {
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const navigate = useNavigate();
+  const matchRoute = useMatchRoute();
   return (
     <Html>
       <Head>
@@ -64,6 +70,26 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           >
             This Route Does Not Exist
           </Link>
+          {["app-1", "app-2"].map((app) => (
+            <button
+              key={app}
+              onClick={async () => {
+                console.log("Navigating to app", app);
+                await navigate({ params: { appId: app } });
+              }}
+              className={
+                !!matchRoute({
+                  to: "/$appId",
+                  params: { appId: app },
+                  fuzzy: true,
+                })
+                  ? "font-bold"
+                  : ""
+              }
+            >
+              Navigate to {app}
+            </button>
+          ))}
         </div>
         <hr />
         {children}
